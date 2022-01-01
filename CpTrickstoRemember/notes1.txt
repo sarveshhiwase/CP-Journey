@@ -1,0 +1,45 @@
+1.Approaching a problem
+-Read the problem carefully
+-Don't miss out the small but VERY essential details
+(Like you'll mostly misout that array is sorted)
+-Think about the topic which is related to problem
+-Think about brute force first
+-Use some algorithmic paradigms like divide and conquer,
+greedy, constructive, recursive
+-Draw a diagram to visualize the problem in real life.
+-Do precomputation if needed
+-Also use prefix and suffix sums or counts
+
+**************************************
+
+2. To check if a no. is power of 2 or not
+Trick - (n & (n-1)) == 0
+All bits are set as 0 except the nth bit in n
+All bits are set as 1 except the nth bit in n-1
+so bitwise and will give the result zero.
+
+**************************************
+
+3.Always think for hashmaps, hashtables, sets, sort
+
+**************************************
+
+4.Always think from the both start and end of arrays for solution.
+
+**************************************
+
+5.Check for edge cases 
+
+**************************************
+
+6.You can also make arrays of arrays, similarly
+arrays of maps, sets, structures and many more, keep that in mind.
+
+**************************************
+
+7.Sum of XOR of all subsets in an array is basically 
+OR of all elements in array and multiplying it with
+pow(2,arraysize - 1)
+Example [5,1,6] = OR = 7
+pow(2,2) * OR
+4 * 7

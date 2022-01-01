@@ -1,0 +1,2 @@
+Can study - 4
+Cannot study - -1

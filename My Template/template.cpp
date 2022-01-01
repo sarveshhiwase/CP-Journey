@@ -9,6 +9,7 @@
 #define negmod(a) (a%mod + mod) % mod 
 using namespace std;
 
+<<<<<<< HEAD
 vector<bool> primes(250,1);
 
 void seive(){
@@ -21,6 +22,8 @@ void seive(){
 	}
 }
 
+=======
+>>>>>>> 0700be2a589f0acac8596fd9016f5007a6881eb9
 void solve();
 
 int main()
@@ -50,4 +53,8 @@ return 0;
 void solve()
 {
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0700be2a589f0acac8596fd9016f5007a6881eb9

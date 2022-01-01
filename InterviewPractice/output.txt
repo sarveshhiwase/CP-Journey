@@ -1,0 +1,29 @@
+1
+-----------------------------------
+0
+0
+-----------------------------------
+I'm animal
+dog
+500
+I have to do something
+-----------------------------------
+9
+16
+10.03
+-----------------------------------
+Son's car
+-----------------------------------
+20
+-----------------------------------
+6
+42
+-----------------------------------
+Base Class Constructor
+Derived Class Constructor
+Base Class Constructor
+Derived Class Constructor
+Derived Class destructor
+Base Class destructor
+Derived Class destructor
+Base Class destructor

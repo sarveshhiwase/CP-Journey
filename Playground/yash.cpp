@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+<<<<<<< HEAD
 void solution(int N,int arr[]){
 	long long int res = 0;
 	for(int i = 0; i < N; i++){
@@ -28,3 +29,24 @@ int main(){
 	solution(2,arr);
 	return 0;
 }
+=======
+
+int main()
+{
+	string s;
+	getline(cin,s);
+	int start = 0;
+	int end;
+	for (int i = 0; i < s.size(); i++)
+	{
+		if(s[i] == ' '){
+			reverse(s.begin()+start,s.begin()+end);
+			start = i + 1;
+		} else {
+			end = i;
+		}
+	}
+	return 0;
+}
+
+>>>>>>> 0700be2a589f0acac8596fd9016f5007a6881eb9

@@ -10,6 +10,7 @@
 using namespace std;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 vector<bool> primes(250,1);
 
 void seive(){
@@ -24,6 +25,8 @@ void seive(){
 
 =======
 >>>>>>> 0700be2a589f0acac8596fd9016f5007a6881eb9
+=======
+>>>>>>> origin/master
 void solve();
 
 int main()
@@ -54,7 +57,11 @@ void solve()
 {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 0700be2a589f0acac8596fd9016f5007a6881eb9
+=======
+}
+>>>>>>> origin/master

@@ -2,6 +2,7 @@
 using namespace std;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void solution(int N,int arr[]){
 	long long int res = 0;
 	for(int i = 0; i < N; i++){
@@ -30,6 +31,8 @@ int main(){
 	return 0;
 }
 =======
+=======
+>>>>>>> origin/master
 
 int main()
 {
@@ -49,4 +52,7 @@ int main()
 	return 0;
 }
 
+<<<<<<< HEAD
 >>>>>>> 0700be2a589f0acac8596fd9016f5007a6881eb9
+=======
+>>>>>>> origin/master

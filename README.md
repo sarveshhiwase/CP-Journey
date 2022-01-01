@@ -6,7 +6,6 @@
 
 ```
 find -type f -executable -delete
-
 ```
 ```
 find . -type f \( -name "*output.txt" -o -name "error.txt" -o -name "input.txt" \) -exec rm -rf {} +

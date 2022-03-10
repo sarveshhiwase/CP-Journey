@@ -90,44 +90,23 @@ int modinv(int x, int m = MOD){
 
 
 void solve(int tc){
-    int n,m;
-    cin >> n >> m;
-    if(m == 0){
-        print("YES");
-        return;
-    }
-    vector<int> v(m,0);
-    cin >> v;
-    sort(all(v));
-    bool canJump = true;
-    int c = 0;
-    for(int i = 0; i < m - 1; i++){
-        if(v[i] == 1 || v[i] == n){
-            canJump = false;
-            break;
-        } else {
-            if(v[i+1] - v[i] == 1){
-                c++;
-            } else {
-                if(c >= 2){
-                    canJump = false;
-                    break;
-                } 
-                c = 0;
-            }
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    int len = s.size();
+    char last = s[0];
+    int c = 1;
+    int time = 0;
+    for(int i = 1; i < len; i++){
+        if(s[i] == s[i-1]) c++;
+        else {
+            time += (c / 2) + (c % 2);
+            c = 1;
         }
     }
-    if(c >= 2){
-        canJump = false;
-    } 
-    if(m && v[m-1] == n || v[m-1] == 1){
-        canJump = false;
-    }
-    if(canJump){
-        print("YES");
-    } else {
-        print("NO");
-    }
+    time += (c / 2) + (c % 2);
+    print(time);
 }
 
 int32_t main(){
@@ -136,7 +115,7 @@ int32_t main(){
     cout << setprecision(12) << fixed;
 
     int tests = 1;
-    // cin>>tests;
+    cin>>tests;
     for (int tt = 1; tt <= tests; tt++)
         solve(tt);
     return 0;

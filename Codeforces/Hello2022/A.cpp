@@ -89,44 +89,28 @@ int modinv(int x, int m = MOD){
 }
 
 
+
 void solve(int tc){
-    int n,m;
-    cin >> n >> m;
-    if(m == 0){
-        print("YES");
-        return;
-    }
-    vector<int> v(m,0);
-    cin >> v;
-    sort(all(v));
-    bool canJump = true;
-    int c = 0;
-    for(int i = 0; i < m - 1; i++){
-        if(v[i] == 1 || v[i] == n){
-            canJump = false;
-            break;
-        } else {
-            if(v[i+1] - v[i] == 1){
-                c++;
-            } else {
-                if(c >= 2){
-                    canJump = false;
-                    break;
-                } 
-                c = 0;
-            }
+    int n,k;
+    cin >> n >> k;
+    vector<vector<char>> board(n,vector<char>(n,'.'));
+    int i = 0;
+    int j = 0;
+    if(k <= ceil(n/(double)2)){
+        while(i < n && j < n && k){
+            board[i][j] = 'R';
+            i+=2;
+            j+=2;
+            k--;
         }
-    }
-    if(c >= 2){
-        canJump = false;
-    } 
-    if(m && v[m-1] == n || v[m-1] == 1){
-        canJump = false;
-    }
-    if(canJump){
-        print("YES");
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                cout << board[i][j];
+            }
+            cout << '\n';
+        }
     } else {
-        print("NO");
+        print("-1");
     }
 }
 
@@ -136,7 +120,7 @@ int32_t main(){
     cout << setprecision(12) << fixed;
 
     int tests = 1;
-    // cin>>tests;
+    cin>>tests;
     for (int tt = 1; tt <= tests; tt++)
         solve(tt);
     return 0;

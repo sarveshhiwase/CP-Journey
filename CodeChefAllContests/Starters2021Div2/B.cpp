@@ -90,44 +90,29 @@ int modinv(int x, int m = MOD){
 
 
 void solve(int tc){
-    int n,m;
-    cin >> n >> m;
-    if(m == 0){
-        print("YES");
-        return;
-    }
-    vector<int> v(m,0);
+    int n;
+    cin >> n;
+    vector<int> v(n,0);
     cin >> v;
     sort(all(v));
-    bool canJump = true;
-    int c = 0;
-    for(int i = 0; i < m - 1; i++){
-        if(v[i] == 1 || v[i] == n){
-            canJump = false;
-            break;
-        } else {
-            if(v[i+1] - v[i] == 1){
-                c++;
-            } else {
-                if(c >= 2){
-                    canJump = false;
-                    break;
-                } 
-                c = 0;
-            }
-        }
-    }
-    if(c >= 2){
-        canJump = false;
-    } 
-    if(m && v[m-1] == n || v[m-1] == 1){
-        canJump = false;
-    }
-    if(canJump){
-        print("YES");
-    } else {
-        print("NO");
-    }
+    vector<int> b;
+    int x;
+    int ans = v[0] & v[n-1];
+    int t = v[0] | v[n-1];
+    int p = v[0] ^ v[n-1];
+    // for(int i = 0; i < n - 1; i++){
+    //     for(int j = i + 1; j < n; j++){
+    //         x = v[i] & v[j];
+    //         b.push_back(x);
+    //     }
+    // }
+    
+    // while(b.size() != 1){
+    //     b.push_back((*max_element(all(b))) | (*min_element(all(b))) );
+    //     b.erase(min_element(all(b)));
+    //     b.erase(max_element(all(b)));
+    // }
+    print(ans,t,p);
 }
 
 int32_t main(){
@@ -136,7 +121,7 @@ int32_t main(){
     cout << setprecision(12) << fixed;
 
     int tests = 1;
-    // cin>>tests;
+    cin>>tests;
     for (int tt = 1; tt <= tests; tt++)
         solve(tt);
     return 0;
